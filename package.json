@@ -1,0 +1,25 @@
+{
+  "name": "markdown-instant-viewer",
+  "displayName": "Markdown Instant Viewer",
+  "description": "Opens Markdown files rendered in the editor with a GitHub-inspired style.",
+  "version": "0.2.0",
+  "publisher": "pedrora22",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "keywords": ["markdown", "preview", "github"],
+  "extensionDependencies": ["vscode.markdown-language-features"],
+  "contributes": {
+    "configurationDefaults": {
+      "workbench.editorAssociations": {
+        "*.md": "vscode.markdown.preview.editor"
+      }
+    },
+    "markdown.previewStyles": ["./media/github-preview.css"]
+  },
+  "scripts": {
+    "check": "node scripts/check.js"
+  }
+}

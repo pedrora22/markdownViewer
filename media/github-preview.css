@@ -1,0 +1,151 @@
+/* Styling for VS Code's built-in Markdown preview. */
+body.vscode-body {
+  --md-fg: #1f2328;
+  --md-muted: #59636e;
+  --md-border: #d1d9e0;
+  --md-subtle: #f6f8fa;
+  --md-code: #eff1f3;
+  --md-link: #0969da;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px clamp(18px, 5vw, 48px) 80px;
+  color: var(--md-fg);
+  background: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+body.vscode-dark {
+  --md-fg: #f0f6fc;
+  --md-muted: #9198a1;
+  --md-border: #3d444d;
+  --md-subtle: #151b23;
+  --md-code: #262c36;
+  --md-link: #4493f8;
+  background: #0d1117;
+}
+
+body.vscode-high-contrast,
+body.vscode-high-contrast-light {
+  --md-fg: var(--vscode-editor-foreground);
+  --md-muted: var(--vscode-descriptionForeground);
+  --md-border: var(--vscode-contrastBorder);
+  --md-subtle: var(--vscode-editor-background);
+  --md-code: var(--vscode-editor-background);
+  --md-link: var(--vscode-textLink-foreground);
+  background: var(--vscode-editor-background);
+}
+
+body.vscode-body > :first-child {
+  margin-top: 0;
+}
+
+body.vscode-body h1,
+body.vscode-body h2,
+body.vscode-body h3,
+body.vscode-body h4,
+body.vscode-body h5,
+body.vscode-body h6 {
+  margin: 24px 0 16px;
+  color: var(--md-fg);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+body.vscode-body h1,
+body.vscode-body h2 {
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--md-border);
+}
+
+body.vscode-body h1 { font-size: 2em; }
+body.vscode-body h2 { font-size: 1.5em; }
+body.vscode-body h3 { font-size: 1.25em; }
+body.vscode-body h4 { font-size: 1em; }
+
+body.vscode-body p,
+body.vscode-body ul,
+body.vscode-body ol,
+body.vscode-body blockquote,
+body.vscode-body table,
+body.vscode-body pre {
+  margin: 0 0 16px;
+}
+
+body.vscode-body a {
+  color: var(--md-link);
+  text-decoration: none;
+}
+
+body.vscode-body a:hover { text-decoration: underline; }
+body.vscode-body a:focus-visible { outline: 2px solid var(--md-link); outline-offset: 2px; }
+
+body.vscode-body hr {
+  height: 1px;
+  margin: 24px 0;
+  border: 0;
+  background: var(--md-border);
+}
+
+body.vscode-body blockquote {
+  padding: 0 1em;
+  color: var(--md-muted);
+  border-left: 4px solid var(--md-border);
+}
+
+body.vscode-body :not(pre) > code {
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  background: var(--md-code);
+  font-size: 85%;
+}
+
+body.vscode-body pre {
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 6px;
+  background: var(--md-subtle);
+  line-height: 1.45;
+}
+
+body.vscode-body pre code {
+  padding: 0;
+  background: transparent;
+  font-size: 85%;
+}
+
+body.vscode-body table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+body.vscode-body table th,
+body.vscode-body table td {
+  padding: 6px 13px;
+  border: 1px solid var(--md-border);
+}
+
+body.vscode-body table th { font-weight: 600; }
+body.vscode-body table tr:nth-child(even) { background: var(--md-subtle); }
+
+body.vscode-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+body.vscode-body ul,
+body.vscode-body ol { padding-left: 2em; }
+body.vscode-body li + li { margin-top: 0.25em; }
+body.vscode-body input[type="checkbox"] { margin-right: 0.4em; }
+
+@media (max-width: 600px) {
+  body.vscode-body { padding: 20px 18px 60px; }
+}

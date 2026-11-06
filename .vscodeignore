@@ -1,0 +1,7 @@
+.vscode/**
+.git/**
+.agents/**
+.codex/**
+test/**
+scripts/**
+*.vsix
